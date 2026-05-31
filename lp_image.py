@@ -16,7 +16,7 @@ ap.add_argument('-o', '--output', help='path to save annotated output image')
 args = ap.parse_args()
 
 yolo_LP_detect = torch.hub.load('yolov5', 'custom', path='model/LP_detector.pt', force_reload=True, source='local')
-yolo_license_plate = torch.hub.load('yolov5', 'custom', path='model/LP_ocr.pt', force_reload=True, source='local')
+yolo_license_plate = torch.hub.load('yolov5', 'custom', path='model/LP_ocr_low_lr.pt', force_reload=True, source='local')
 yolo_license_plate.conf = 0.60
 
 img = cv2.imread(args.image)
