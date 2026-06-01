@@ -55,9 +55,9 @@ def color_plate_tag(crop):
     red_ratio = red_mask.sum() / area
     blue_ratio = blue_mask.sum() / area
 
-    if red_ratio >= 0.15 and red_ratio > blue_ratio * 1.5:
+    if red_ratio >= 0.35 and red_ratio > blue_ratio * 1.5:
         return MIL_TAG
-    if blue_ratio >= 0.15 and blue_ratio > red_ratio * 1.5:
+    if blue_ratio >= 0.55 and blue_ratio > red_ratio * 1.5:
         return GOV_TAG
     return None
 
